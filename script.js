@@ -1,7 +1,13 @@
 let playerScore = 0
 let computerScore = 0
 
-let runningScore = `Player: ${playerScore} - Computer: ${computerScore}`
+let displayScore = function displayScore () {
+    const results = document.querySelector('#results');
+    const resultsContent = document.createElement('div');
+    resultsContent.setAttribute('id', 'resultsContent');
+    resultsContent.textContent = `Player Score: ${playerScore} , Computer Score: ${computerScore}`;
+    results.appendChild(resultsContent);
+}
 
 const rock = document.querySelector('#rock');
 rock.addEventListener("click", () => {
@@ -13,6 +19,7 @@ rock.addEventListener("click", () => {
     console.log(`Computer picks ${computerSelection}`);
     console.log(`Player's score = ${playerScore} points`);
     console.log(`Computer's score = ${computerScore} points`);
+    displayScore();
 });
 
 const paper = document.querySelector('#paper');
@@ -25,6 +32,7 @@ paper.addEventListener("click", () => {
     console.log(`Computer picks ${computerSelection}`);
     console.log(`Player's score = ${playerScore} points`);
     console.log(`Computer's score = ${computerScore} points`);
+    displayScore();
 });
 
 const scissors = document.querySelector('#scissors');
@@ -37,7 +45,7 @@ scissors.addEventListener("click", () => {
     console.log(`Computer picks ${computerSelection}`);
     console.log(`Player's score = ${playerScore} points`);
     console.log(`Computer's score = ${computerScore} points`);
-    
+    displayScore();    
 });
     
 function computerChooses () {
@@ -87,11 +95,17 @@ if (playerSelection === "rock" && computerSelection === "rock") {
 
 };
 
-const results = document.querySelector('#results');
-const resultsContent = document.createElement('div');
-resultsContent.setAttribute('id', 'results');
-resultsContent.textContent = `Player Score: ${playerScore} , Computer Score: ${computerScore}`;
-results.appendChild(resultsContent);
+
+
+// const results = document.querySelector('#results');
+// const resultsContent = document.createElement('div');
+// resultsContent.setAttribute('id', 'results');
+// resultsContent.textContent = `Player Score: ${playerScore} , Computer Score: ${computerScore}`;
+// results.appendChild(resultsContent);
+
+
+
+
 
 
 
