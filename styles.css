@@ -1,0 +1,52 @@
+body {
+background: navy;
+color: yellow;
+font-size: 26px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#chosen {
+display: flex;
+align-content: center;
+justify-content: center;
+margin-top: 215px;
+}
+
+#playerOptions {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 30px;
+}
+
+img {
+padding: 16px 16px;
+margin: 16px 16px;
+
+}
+
+.choices {
+padding: 16px 16px;
+margin: 20px 20px;
+border-radius: 50%;
+}
+
+#rock {
+background-image: url(/images/rock.png) no-repeat;
+}
+
+#results {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#reset {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px 10px;
+margin: 16px 16x;
+font-size: 18px;
+font-weight: 900;  
+}
